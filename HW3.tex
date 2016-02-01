@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\pagestyle{empty}
+% The following packages give you all the American Mathematics Society symbols
+% see the Short Math Guide at
+% http://www.tex.ac.uk/tex-archive/fonts/amsfonts/doc/amssymb.pdf for details
+\usepackage{amsmath,amssymb}
+\usepackage[paper=letterpaper,
+  left=1in,
+  right=1in,
+  top=1in,
+  bottom=1in]{geometry}
+  
+% take the following line out for an English or history paper
+\usepackage[parfill]{parskip} 
+
+\begin{document}
+
+\begin{center}
+\Large{CS 191\\}
+\large{Homework 3\\}
+\end{center}
+\begin{flushright}
+cjm8713\\
+Cameron Moberg\\
+\today\\
+\end{flushright}
+
+\textbf{Problem 1.} Let $A = \{x,y,z\}$ and $B = \{p,q\}$.  Compute the following:\\
+   a. $A \times B$\\
+\textit{Answer:} $\{(x,p),(x,q),(y,p),(y,q),(z,p),(z,q)\}$\\
+   b. $A^2$\\
+\textit{Answer:} $\{(x,x),(x,y),(x,z),(y,x),(y,y),(y,z),(z,x),(z,y),(z,z)\}$\\
+
+\textbf{Problem 2.}  Find the head and tail of each list.\\
+   a. $\langle a, b, c\rangle$\\
+   \textit{Answer:} Head: $a$, Tail: $\langle b,c\rangle $\\
+   b. $\langle \langle a, b \rangle, \langle a, c \rangle \rangle$ \\
+   \textit{Answer:} Head: $\langle a,b \rangle$, Tail: $\langle\langle a,c\rangle\rangle $\\
+You will find it useful to know that $\lambda$ and $\Lambda$ exist.\\
+
+\textbf{Problem 8.} Let $L = \{\Lambda, abb, b\}$ and $M = \{bba,ab,a\}$ Evaluate the following expressions.\\
+a. $LM = \{bba, ab, a, abbbba, abbab, abba, bbba, bab, ba\}$\\
+b. $ML = \{bba, bbaabb,bbab,ab,ababb,abb,a,aabb,ab\}$\\
+e. $L^2 = \{\Lambda,abb,b,abbabb,abbb,babb,bb\}$\\
+
+\textbf{Problem 14.} For each of the following cases, find the number of strings over the alphabet $\{a,b,c,d,e\}$ that satisfy the given conditions.\\
+a. Length 4, begins with $a$ or $b$, contains at least one $c$. \\
+\textit{Answer: }The total combinations of length 4 over this alphabet is $5^4$, however beginning with $a$ or $b$ changes that to $2*5^3$, and then requiring at least one $c$ is found by subtracting all possibilities that contain no $c$ and start with $a$ or $b$ which is $2*3^4$. Which when put all together is $2*5^3 -2*4^3$ or 122.\\
+b. Length 5, begins with $a$, ends with $b$, contains at least one $c$ or $d$.\\
+\textit{Answer: }The total combination of length 5 over an alphabet 5 long is $5^5$, but starting with an $a$ and ending with a $b$ narrows it down to $5^3$. To find how many combinations contain at least one $c$ or $d$ we must find how many combinations don't include either a $c$ or a $d$ which is $3^3$. So the answer is $5^3 - 3^3$ or 98.
+\end{document}
